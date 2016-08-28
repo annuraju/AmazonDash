@@ -9,6 +9,7 @@
     };
 
     ext.my_first_block = function() {
+      console.log("I am here bitch!!");
       return "Yes"; 
     };
 
