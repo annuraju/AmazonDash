@@ -48,7 +48,7 @@
                 case 'on':
                     alert("Button pressed");
                     console.log("ON Button pressed");
-                    break;
+                    return message;
                 case 'off':
                     console.log("OFF Button pressed");
                     break;
