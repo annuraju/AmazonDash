@@ -42,10 +42,9 @@
         };
 
         window.socket.onmessage = function (message) {
-            var msg = JSON.parse(message.data);
             if (debugLevel)
-                console.log(msg);
-            switch (msg['info']) {
+                console.log(message);
+            switch (message) {
                 case 'on':
                     console.log("ON Button pressed");
                     break;
