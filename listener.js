@@ -44,7 +44,7 @@
         window.socket.onmessage = function (message) {
             if (debugLevel)
                 console.log(message);
-            switch (message) {
+            switch (message.data) {
                 case 'on':
                     console.log("ON Button pressed");
                     break;
