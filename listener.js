@@ -1,6 +1,7 @@
 (function(ext) {
 
     var socket = null;
+    var debugLevel = true;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
