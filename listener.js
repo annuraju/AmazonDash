@@ -46,6 +46,7 @@
                 console.log(message);
             switch (message.data) {
                 case 'on':
+                    alert("Button pressed");
                     console.log("ON Button pressed");
                     break;
                 case 'off':
