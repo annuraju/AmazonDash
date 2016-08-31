@@ -16,6 +16,15 @@
       console.log("I am here!!");
       return "Yes";
     };
+    
+    ext.send_msg = function(){
+        window.socket = new WebSocket("ws://127.0.0.1:9000");
+        var msg = JSON.stringify({
+            "command": "sniff"
+        });
+        window.socket.send(msg);
+
+    };
 
     ext.cnct = function () {
         if(debugLevel)
@@ -63,6 +72,7 @@
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
             [' ', 'connect', 'cnct'],
+            [' ', 'send message', 'send_msg'],
         ]
     };
 
