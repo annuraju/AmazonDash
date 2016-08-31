@@ -18,7 +18,6 @@
     };
     
     ext.send_msg = function(){
-        window.socket = new WebSocket("ws://127.0.0.1:9000");
         var msg = JSON.stringify({
             "command": "sniff"
         });
