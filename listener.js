@@ -66,7 +66,7 @@
     };
     
     ext.on = function(){
-        xhr.open('GET', "http://192.168.0.8/cgi-bin/relay.cgi?off", true);
+        xhr.open('GET', "http://192.168.0.8/cgi-bin/relay.cgi?toggle", true);
         xhr.send();    
     };
     
