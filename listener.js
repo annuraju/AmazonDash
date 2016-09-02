@@ -24,9 +24,23 @@
             "command": "sniff"
         });
         window.socket.send(msg);
-
+        
+        window.socket.onmessage = function (message) {
+            if (debugLevel)
+                console.log(message);
+            switch (message.data) {
+                case 'on':
+                    alert("Button pressed");
+                    console.log("ON Button pressed");
+                    result = "on";
+                    return result;
+                case 'off':
+                    console.log("OFF Button pressed");
+                    break;
+            }
+        };
     };
-
+    
     ext.cnct = function () {
         if(debugLevel)
             console.log('Connecting to Server');
