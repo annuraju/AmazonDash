@@ -2,6 +2,7 @@
 
     var socket = null;
     var debugLevel = true;
+    var xhr = new XMLHttpRequest();
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -65,7 +66,8 @@
     };
     
     ext.on = function(){
-        print("ON");
+        xhr.open('GET', "http://192.168.0.8/cgi-bin/relay.cgi?off", true);
+        xhr.send();    
     };
     
     ext.off = function(){
