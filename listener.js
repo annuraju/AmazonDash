@@ -3,6 +3,7 @@
     var socket = null;
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
+    var result = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -49,7 +50,8 @@
                 case 'on':
                     alert("Button pressed");
                     console.log("ON Button pressed");
-                    return "on";
+                    result = "on";
+                    return result;
                 case 'off':
                     console.log("OFF Button pressed");
                     break;
