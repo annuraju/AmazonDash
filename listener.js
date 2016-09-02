@@ -63,6 +63,18 @@
             myMsg = 'not_ready'
         };
     };
+    
+    ext.on = function(){
+        print("ON");
+    };
+    
+    ext.off = function(){
+        print("OFF");
+    };
+    
+    ext.toggle = function(){
+        print("TOGGLE");
+    };
 
 
     // Block and block menu descriptions
@@ -72,6 +84,9 @@
             [' ', 'my first block', 'my_first_block'],
             [' ', 'connect', 'cnct'],
             [' ', 'send message', 'send_msg'],
+            [' ', 'on', 'on'],
+            [' ', 'off', 'off'],
+            [' ', 'toggle', 'toggle'],
         ]
     };
 
