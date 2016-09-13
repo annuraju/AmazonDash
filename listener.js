@@ -3,7 +3,7 @@
     var socket = null;
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
-    var result = null;
+    var test = "off";
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -29,13 +29,15 @@
             if (debugLevel)
                 console.log(message);
             switch (message.data) {
-                case 'on':
+                case "on":
                     alert("Button pressed");
                     console.log("ON Button pressed");
-                    result = "on";
-                    return result;
-                case 'off':
+                    test = "on";
+                    return test;
+                case "off":
                     console.log("OFF Button pressed");
+                    test = "off";
+                    return test;
                     break;
             }
         };
@@ -56,21 +58,6 @@
             myMsg = 'ready';
             connected = true;
         };
-
-        window.socket.onmessage = function (message) {
-            if (debugLevel)
-                console.log(message);
-            switch (message.data) {
-                case 'on':
-                    alert("Button pressed");
-                    console.log("ON Button pressed");
-                    result = "on";
-                    return result;
-                case 'off':
-                    console.log("OFF Button pressed");
-                    break;
-            }
-        };
         
         window.socket.onclose = function (e) {
             console.log("Connection closed.");
@@ -84,9 +71,12 @@
     ext.on = function(){
         xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
         xhr.send();    
+        print("ON");
     };
     
     ext.off = function(){
+        xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?off", true);
+        xhr.send();
         print("OFF");
     };
     
