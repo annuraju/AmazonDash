@@ -3,7 +3,8 @@
     var socket = null;
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
-    var test = 0;
+    var response = 0;
+    var status = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -19,6 +20,10 @@
       return "Yes";
     };
     
+    ext.check_button_status = function(){
+        status = response;
+    };
+    
     ext.send_msg = function(){
         var msg = JSON.stringify({
             "command": "sniff"
@@ -32,12 +37,12 @@
                 case "on":
                     alert("Button pressed");
                     console.log("ON Button pressed");
-                    test = 1;
-                    return test;
+                    response = 1;
+                    return response;
                 case "off":
                     console.log("OFF Button pressed");
-                    test = 0;
-                    return test;
+                    response = 0;
+                    return response;
                     break;
             }
         };
@@ -95,6 +100,7 @@
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
+            [' ', 'check button status', 'check_button_status'],
         ]
     };
 
