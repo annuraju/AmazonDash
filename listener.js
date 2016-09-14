@@ -73,11 +73,9 @@
                 case 'off':
                     console.log("OFF Button pressed");
                     break;
-            }                
+            }    
+            ext.check_status();
         };
-        
-        return result;
-
     };
     
     ext.cnct = function () {
