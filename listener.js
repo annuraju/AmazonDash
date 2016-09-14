@@ -115,6 +115,12 @@
                 break;
             case "2":
                 alert("ON button pressed");
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
                 xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();        
                 break;
