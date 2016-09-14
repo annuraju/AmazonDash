@@ -74,7 +74,6 @@
                     console.log("OFF Button pressed");
                     break;
             }    
-            ext.check_status();
         };
     };
     
