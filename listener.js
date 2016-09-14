@@ -34,42 +34,48 @@
             if (debugLevel)
                 console.log(message);
                 
-            result = message.data;
-        };
-        
-        switch (result) {
+        switch (message.data) {
             case 'play-doh':
                 alert("Play-Doh button pressed");
-                return 1;
+                result = message.data;
+                break;
             case 'ON':
                 alert("ON button pressed");
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send(); 
-                return 2;
+                result = message.data;
+                break;
             case 'Goldfish':
                 alert("Goldfish button pressed");
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send(); 
-                return result;
+                result = message.data;
+                break;
             case 'Charmin':
                 alert("Charmin button pressed");
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send(); 
-                return result;
+                result = message.data;
+                break;
             case 'Energizer':
                 alert("Energizer button pressed");
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send(); 
-                return result;
+                result = message.data;
+                break;
+
             case 'HonestKids':
                 alert("HonestKids button pressed");
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send(); 
-                return result;                    
+                result = message.data;
+                break;
             case 'off':
                 console.log("OFF Button pressed");
                 break;
-        }
+        }                
+        };
+
     };
     
     ext.cnct = function () {
@@ -135,7 +141,7 @@
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
             [' ', 'connect', 'cnct'],
-            ['r', 'send message', 'send_msg'],
+            [' ', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
