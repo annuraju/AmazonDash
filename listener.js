@@ -29,13 +29,41 @@
             if (debugLevel)
                 console.log(message);
             switch (message.data) {
-                case 'on':
-                    alert("Button pressed");
-                    console.log("ON Button pressed");
-                    result = "on";
+                case 'play-doh':
+                    alert("Play-Doh button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
                     return result;
+                case 'play-doh':
+                    alert("Play-Doh button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;                
+                case 'ON':
+                    alert("ON button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;
+                case 'Goldfish':
+                    alert("Goldfish button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;
+                case 'Charmin':
+                    alert("Charmin button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;
+                case 'Energizer':
+                    alert("Energizer button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;
+                case 'HonestKids':
+                    alert("HonestKids button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    return result;                    
                 case 'off':
                     console.log("OFF Button pressed");
                     break;
