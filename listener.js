@@ -4,6 +4,7 @@
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
     var result = null;
+    var plug = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -21,6 +22,7 @@
     
     ext.check_status = function(){
         console.log(result);
+        plug = result;
         return result;
     };
     
@@ -41,33 +43,23 @@
                     break;
                 case 'ON':
                     alert("ON button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
                     result = message.data;
                     break;
                 case 'Goldfish':
                     alert("Goldfish button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
                     result = message.data;
                     break;
                 case 'Charmin':
                     alert("Charmin button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
                     result = message.data;
                     break;
                 case 'Energizer':
                     alert("Energizer button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
                     result = message.data;
                     break;
     
                 case 'HonestKids':
                     alert("HonestKids button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
                     result = message.data;
                     break;
                 case 'off':
@@ -119,8 +111,52 @@
     };
     
     ext.on = function(){
-        xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-        xhr.send();    
+        switch (plug) {
+            case 1:
+                alert("Play-Doh button pressed");
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();                
+                break;
+            case 2:
+                alert("ON button pressed");
+                xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();        
+                break;
+            case 3:
+                alert("Goldfish button pressed");
+                xhr.open('GET', "http://192.168.1.142/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case 4:
+                alert("Charmin button pressed");
+                xhr.open('GET', "http://192.168.1.103/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case 5:
+                alert("Energizer button pressed");
+                xhr.open('GET', "http://192.168.1.183/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+
+            case 6:
+                alert("HonestKids button pressed");
+                xhr.open('GET', "http://192.168.1.164/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            default:
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                console.log("OFF Button pressed");
+                break;
+        }                
+
+    
     };
     
     ext.off = function(){
