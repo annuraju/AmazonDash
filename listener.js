@@ -33,6 +33,8 @@
                     alert("Button pressed");
                     console.log("ON Button pressed");
                     result = "on";
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
                     return result;
                 case 'off':
                     console.log("OFF Button pressed");
