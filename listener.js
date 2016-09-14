@@ -23,7 +23,8 @@
     ext.check_status = function(){
         console.log(result);
         plug = result;
-        return result;
+        result  = 0;
+        return plug;
     };
     
     ext.send_msg = function(){
