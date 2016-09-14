@@ -33,7 +33,7 @@
                     alert("Play-Doh button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
-                    return 1;
+                    return ScratchExtensions.getStatus(ext).status;
                 case 'ON':
                     alert("ON button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
@@ -119,6 +119,9 @@
         print("TOGGLE");
     };
 
+    ext._getStatus=function(){
+        return{status:2,msg:"Ready"}
+    };
 
     // Block and block menu descriptions
     var descriptor = {
