@@ -33,7 +33,7 @@
                     alert("Play-Doh button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
-                    return ScratchExtensions.getStatus(ext).status;
+                    return ScratchExtensions.getStatus('My first extension').status;
                 case 'ON':
                     alert("ON button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
