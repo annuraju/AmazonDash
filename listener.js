@@ -3,8 +3,7 @@
     var socket = null;
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
-    var response = 0;
-    var button_status = null;
+    var result = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -20,11 +19,6 @@
       return "Yes";
     };
     
-    ext.check_button_status = function(){
-        button_status = response;
-        return button_status;
-    };
-    
     ext.send_msg = function(){
         var msg = JSON.stringify({
             "command": "sniff"
@@ -35,15 +29,13 @@
             if (debugLevel)
                 console.log(message);
             switch (message.data) {
-                case "on":
+                case 'on':
                     alert("Button pressed");
                     console.log("ON Button pressed");
-                    response = 1;
-                    return response;
-                case "off":
+                    result = "on";
+                    return result;
+                case 'off':
                     console.log("OFF Button pressed");
-                    response = 0;
-                    return response;
                     break;
             }
         };
@@ -64,6 +56,21 @@
             myMsg = 'ready';
             connected = true;
         };
+
+        window.socket.onmessage = function (message) {
+            if (debugLevel)
+                console.log(message);
+            switch (message.data) {
+                case 'on':
+                    alert("Button pressed");
+                    console.log("ON Button pressed");
+                    result = "on";
+                    return result;
+                case 'off':
+                    console.log("OFF Button pressed");
+                    break;
+            }
+        };
         
         window.socket.onclose = function (e) {
             console.log("Connection closed.");
@@ -75,14 +82,11 @@
     };
     
     ext.on = function(){
-        xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+        xhr.open('GET', "http://192.168.0.8/cgi-bin/relay.cgi?toggle", true);
         xhr.send();    
-        print("ON");
     };
     
     ext.off = function(){
-        xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?off", true);
-        xhr.send();
         print("OFF");
     };
     
@@ -101,7 +105,6 @@
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
-            [' ', 'check button status', 'check_button_status'],
         ]
     };
 
