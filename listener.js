@@ -33,17 +33,12 @@
                     alert("Play-Doh button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
-                    return result;
-                case 'play-doh':
-                    alert("Play-Doh button pressed");
-                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                    xhr.send(); 
-                    return result;                
+                    return 1;
                 case 'ON':
                     alert("ON button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
-                    return result;
+                    return 2;
                 case 'Goldfish':
                     alert("Goldfish button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
