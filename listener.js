@@ -37,33 +37,30 @@
                 console.log(message);
                 
             switch (message.data) {
-                case 'play-doh':
+                case 1:
                     alert("Play-Doh button pressed");
                     result = message.data;
                     break;
-                case 'ON':
+                case 2:
                     alert("ON button pressed");
                     result = message.data;
                     break;
-                case 'Goldfish':
+                case 3:
                     alert("Goldfish button pressed");
                     result = message.data;
                     break;
-                case 'Charmin':
+                case 4:
                     alert("Charmin button pressed");
                     result = message.data;
                     break;
-                case 'Energizer':
+                case 5:
                     alert("Energizer button pressed");
                     result = message.data;
                     break;
     
-                case 'HonestKids':
+                case 6:
                     alert("HonestKids button pressed");
                     result = message.data;
-                    break;
-                case 'off':
-                    console.log("OFF Button pressed");
                     break;
             }                
         };
