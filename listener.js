@@ -34,46 +34,46 @@
             if (debugLevel)
                 console.log(message);
                 
-        switch (message.data) {
-            case 'play-doh':
-                alert("Play-Doh button pressed");
-                result = message.data;
-                break;
-            case 'ON':
-                alert("ON button pressed");
-                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                xhr.send(); 
-                result = message.data;
-                break;
-            case 'Goldfish':
-                alert("Goldfish button pressed");
-                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                xhr.send(); 
-                result = message.data;
-                break;
-            case 'Charmin':
-                alert("Charmin button pressed");
-                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                xhr.send(); 
-                result = message.data;
-                break;
-            case 'Energizer':
-                alert("Energizer button pressed");
-                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                xhr.send(); 
-                result = message.data;
-                break;
-
-            case 'HonestKids':
-                alert("HonestKids button pressed");
-                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
-                xhr.send(); 
-                result = message.data;
-                break;
-            case 'off':
-                console.log("OFF Button pressed");
-                break;
-        }                
+            switch (message.data) {
+                case 'play-doh':
+                    alert("Play-Doh button pressed");
+                    result = message.data;
+                    break;
+                case 'ON':
+                    alert("ON button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    result = message.data;
+                    break;
+                case 'Goldfish':
+                    alert("Goldfish button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    result = message.data;
+                    break;
+                case 'Charmin':
+                    alert("Charmin button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    result = message.data;
+                    break;
+                case 'Energizer':
+                    alert("Energizer button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    result = message.data;
+                    break;
+    
+                case 'HonestKids':
+                    alert("HonestKids button pressed");
+                    xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
+                    xhr.send(); 
+                    result = message.data;
+                    break;
+                case 'off':
+                    console.log("OFF Button pressed");
+                    break;
+            }                
         };
 
     };
