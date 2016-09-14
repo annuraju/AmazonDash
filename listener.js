@@ -143,7 +143,7 @@
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
             [' ', 'connect', 'cnct'],
-            [' ', 'send message', 'send_msg'],
+            ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
