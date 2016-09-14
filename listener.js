@@ -4,7 +4,7 @@
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
     var response = 0;
-    var status = null;
+    var button_status = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -21,7 +21,8 @@
     };
     
     ext.check_button_status = function(){
-        status = response;
+        button_status = response;
+        return button_status;
     };
     
     ext.send_msg = function(){
