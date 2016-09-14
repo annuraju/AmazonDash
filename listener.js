@@ -19,6 +19,11 @@
       return "Yes";
     };
     
+    ext.check_status = function(){
+        console.log(result);
+        return result;
+    };
+    
     ext.send_msg = function(){
         var msg = JSON.stringify({
             "command": "sniff"
@@ -33,7 +38,7 @@
                     alert("Play-Doh button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                     xhr.send(); 
-                    return ScratchExtensions.getStatus('My first extension').status;
+                    result = 1;
                 case 'ON':
                     alert("ON button pressed");
                     xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
@@ -133,6 +138,7 @@
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
+            ['r', 'check status', 'check_status'],
         ]
     };
 
