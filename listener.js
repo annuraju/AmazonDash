@@ -56,6 +56,8 @@
                 case "6":
                     result = message.data;
                     break;
+                case "7":
+                    result = message.data;
             }                
         };
 
@@ -127,6 +129,10 @@
                 xhr.open('GET', "http://192.168.1.164/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();
                 break;
+            case "7":
+                xhr.open('GET', "http://192.168.1.117/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;                
             default:
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();
