@@ -25,15 +25,20 @@
         window.socket.send(msg);
         
         var plug = 0;
+        result = 0;
+
         window.socket.onmessage = function (message) {
+            plug = 0;
+            result = 0;
             
             if (debugLevel)
                 console.log(message);
                 
             plug = message.data;
+            result = plug;
         };
         
-        return plug;
+        return result;
 
     };
     
