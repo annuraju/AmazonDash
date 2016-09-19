@@ -37,29 +37,10 @@
             if (debugLevel)
                 console.log(message);
                 
-            switch (message.data) {
-                case "1":
-                    result = message.data;
-                    break;
-                case "2":
-                    result = message.data;
-                    break;
-                case "3":
-                    result = message.data;
-                    break;
-                case "4":
-                    result = message.data;
-                    break;
-                case "5":
-                    result = message.data;
-                    break;
-                case "6":
-                    result = message.data;
-                    break;
-                case "7":
-                    result = message.data;
-            }                
+            result = message.data;
         };
+        
+        return result;
 
     };
     
@@ -167,7 +148,7 @@
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
             [' ', 'connect', 'cnct'],
-            [' ', 'send message', 'send_msg'],
+            ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
