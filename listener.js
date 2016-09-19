@@ -29,11 +29,8 @@
             if (debugLevel)
                 console.log(message);
                 
-            result = message.data;
+            return message.data;
         };
-        
-        return result;
-
     };
     
     ext.cnct = function () {
