@@ -17,14 +17,6 @@
 
     ext.my_first_block = function() {
       console.log("I am here!!");
-      return "Yes";
-    };
-    
-    ext.check_status = function(){
-        console.log(result);
-        plug = result;
-        result  = 0;
-        return plug;
     };
     
     ext.send_msg = function(){
@@ -59,21 +51,6 @@
             myMsg = 'ready';
             connected = true;
         };
-
-        window.socket.onmessage = function (message) {
-            if (debugLevel)
-                console.log(message);
-            switch (message.data) {
-                case 'on':
-                    alert("Button pressed");
-                    console.log("ON Button pressed");
-                    result = "on";
-                    return result;
-                case 'off':
-                    console.log("OFF Button pressed");
-                    break;
-            }
-        };
         
         window.socket.onclose = function (e) {
             console.log("Connection closed.");
@@ -85,7 +62,7 @@
     };
     
     ext.on = function(){
-        switch (plug) {
+        switch (result) {
             case "1":
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();                
