@@ -4,6 +4,8 @@
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
     var result = null;
+    var plug = null;
+    var status = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -24,7 +26,7 @@
         });
         window.socket.send(msg);
         
-        var plug = 0;
+        plug = 0;
         result = 0;
 
         window.socket.onmessage = function (message) {
@@ -36,10 +38,10 @@
                 
             plug = message.data;
             result = plug;
+            status = result;
         };
         
         return result;
-
     };
     
     ext.cnct = function () {
@@ -68,7 +70,7 @@
     };
     
     ext.on = function(){
-        switch (result) {
+        switch (status) {
             case "1":
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();                
