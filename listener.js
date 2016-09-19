@@ -4,6 +4,7 @@
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
     var result = null;
+    var plug = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -16,6 +17,14 @@
 
     ext.my_first_block = function() {
       console.log("I am here!!");
+      return "Yes";
+    };
+    
+    ext.check_status = function(){
+        console.log(result);
+        plug = result;
+        result  = 0;
+        return plug;
     };
     
     ext.send_msg = function(){
@@ -23,15 +32,17 @@
             "command": "sniff"
         });
         window.socket.send(msg);
-
+        
         window.socket.onmessage = function (message) {
             if (debugLevel)
                 console.log(message);
+                
             result = message.data;
         };
-            
+        
         return result;
-    };
+
+    };    
     
     ext.cnct = function () {
         if(debugLevel)
