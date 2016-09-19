@@ -96,7 +96,7 @@
                 xhr.send();
                 break;
             case "7":
-                xhr.open('GET', "http://192.168.1.117/cgi-bin/relay.cgi?on", true);
+                xhr.open('GET', "http://192.168.1.170/cgi-bin/relay.cgi?on", true);
                 xhr.send();
                 break;                
         }
