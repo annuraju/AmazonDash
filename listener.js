@@ -4,7 +4,6 @@
     var debugLevel = true;
     var xhr = new XMLHttpRequest();
     var result = null;
-    var plug = null;
 
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
@@ -25,12 +24,17 @@
         });
         window.socket.send(msg);
         
+        var plug = 0;
         window.socket.onmessage = function (message) {
+            
             if (debugLevel)
                 console.log(message);
                 
-            return message.data;
+            plug = message.data;
         };
+        
+        return plug;
+
     };
     
     ext.cnct = function () {
@@ -126,7 +130,6 @@
             [' ', 'on', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
-            ['r', 'check status', 'check_status'],
         ]
     };
 
