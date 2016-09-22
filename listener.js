@@ -69,7 +69,7 @@
         };
     };
     
-    ext.on = function(s){
+    ext.switch_on_plug = function(s){
         console.log(s);
         console.log("switch is on");
     };
@@ -185,7 +185,7 @@
             [' ', 'connect', 'cnct'],
             ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
-            ['r', 'on %s', 'on', 's'],
+            ['r', 'switch on %s', 'switch_on_plug', 's'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
