@@ -185,7 +185,7 @@
             [' ', 'connect', 'cnct'],
             ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
-            [' ', 'on %i', 'on'],
+            ['r', 'on %i', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
