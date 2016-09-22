@@ -185,12 +185,12 @@
             [' ', 'connect', 'cnct'],
             ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
-            ['r', 'on %s', 'on', s],
+            ['r', 'on %s', 'on', 's'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
     };
 
     // Register the extension
-    ScratchExtensions.register('My first extension', descriptor, ext, s);
+    ScratchExtensions.register('My first extension', descriptor, ext);
 })({});
