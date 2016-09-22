@@ -69,6 +69,11 @@
         };
     };
     
+    ext.on = function(i){
+        console.log(i);
+        console.log("switch is on");
+    };
+    
     ext.on = function(){
         switch (result) {
             case "1":
@@ -180,6 +185,7 @@
             [' ', 'connect', 'cnct'],
             ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
+            [' ', 'on %i', 'on'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
