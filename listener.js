@@ -182,10 +182,10 @@
         blocks: [
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
-            [' ', 'connect', 'cnct'],
-            ['r', 'send message', 'send_msg'],
+            [' ', 'start sniffer', 'cnct'],
+            ['r', 'sniffed', 'send_msg'],
             [' ', 'on', 'on'],
-            ['r', 'switch on %s', 'switch_on_plug', 's'],
+            ['r', 'switch on plug %s', 'switch_on_plug', 's'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
