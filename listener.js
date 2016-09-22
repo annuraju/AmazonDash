@@ -69,8 +69,8 @@
         };
     };
     
-    ext.on = function(i){
-        console.log(i);
+    ext.on = function(in){
+        console.log(in);
         console.log("switch is on");
     };
     
@@ -185,12 +185,12 @@
             [' ', 'connect', 'cnct'],
             ['r', 'send message', 'send_msg'],
             [' ', 'on', 'on'],
-            ['r', 'on %i', 'on', i],
+            ['r', 'on %in', 'on', in],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
     };
 
     // Register the extension
-    ScratchExtensions.register('My first extension', descriptor, ext);
+    ScratchExtensions.register('My first extension', descriptor, ext, in);
 })({});
