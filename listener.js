@@ -70,12 +70,7 @@
     };
     
     ext.switch_on_plug = function(s){
-        console.log(s);
-        console.log("switch is on");
-    };
-    
-    ext.on = function(){
-        switch (result) {
+        switch (s) {
             case "1":
                 xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?on", true);
                 xhr.send();                
@@ -85,7 +80,7 @@
                 xhr.send();
                 break;
             case "3":
-                xhr.open('GET', "http://192.168.1.142/cgi-bin/relay.cgi?on", true);
+                xhr.open('GET', "http://192.168.1.141/cgi-bin/relay.cgi?on", true);
                 xhr.send();
                 break;
             case "4":
@@ -103,7 +98,147 @@
             case "7":
                 xhr.open('GET', "http://192.168.1.170/cgi-bin/relay.cgi?on", true);
                 xhr.send();
-                break;                
+                break;
+            case "8":
+                xhr.open('GET', "http://192.168.1.144/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "9":
+                xhr.open('GET', "http://192.168.1.198/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "10":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "11":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "12":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "13":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "14":
+                xhr.open('GET', "http://192.168.1.122/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "15":
+                xhr.open('GET', "http://192.168.1.110/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "16":
+                xhr.open('GET', "http://192.168.167/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;     
+            case "17":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "18":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "19":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "20":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+                
+        }    
+        
+    };
+    
+    ext.on = function(){
+        switch (result) {
+            case "1":
+                xhr.open('GET', "http://192.168.1.188/cgi-bin/relay.cgi?on", true);
+                xhr.send();                
+                break;
+            case "2":
+                xhr.open('GET', "http://192.168.1.146/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "3":
+                xhr.open('GET', "http://192.168.1.141/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "4":
+                xhr.open('GET', "http://192.168.1.103/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "5":
+                xhr.open('GET', "http://192.168.1.183/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "6":
+                xhr.open('GET', "http://192.168.1.164/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "7":
+                xhr.open('GET', "http://192.168.1.170/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "8":
+                xhr.open('GET', "http://192.168.1.144/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "9":
+                xhr.open('GET', "http://192.168.1.198/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "10":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "11":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "12":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "13":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "14":
+                xhr.open('GET', "http://192.168.1.122/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "15":
+                xhr.open('GET', "http://192.168.1.110/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "16":
+                xhr.open('GET', "http://192.168.167/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break; 
+            case "17":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "18":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "19":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+            case "20":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?on", true);
+                xhr.send();
+                break;
+
         }
     };
     
@@ -118,7 +253,7 @@
                 xhr.send();
                 break;
             case "3":
-                xhr.open('GET', "http://192.168.1.142/cgi-bin/relay.cgi?off", true);
+                xhr.open('GET', "http://192.168.1.141/cgi-bin/relay.cgi?off", true);
                 xhr.send();
                 break;
             case "4":
@@ -134,9 +269,62 @@
                 xhr.send();
                 break;
             case "7":
-                xhr.open('GET', "http://192.168.1.117/cgi-bin/relay.cgi?off", true);
+                xhr.open('GET', "http://192.168.1.170/cgi-bin/relay.cgi?off", true);
                 xhr.send();
-                break;                
+                break;
+            case "8":
+                xhr.open('GET', "http://192.168.1.144/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "9":
+                xhr.open('GET', "http://192.168.1.198/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "10":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "11":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "12":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "13":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "14":
+                xhr.open('GET', "http://192.168.1.122/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "15":
+                xhr.open('GET', "http://192.168.1.110/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "16":
+                xhr.open('GET', "http://192.168.167/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break; 
+            case "17":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "18":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "19":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+            case "20":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?off", true);
+                xhr.send();
+                break;
+
         }    
         
     };
@@ -152,7 +340,7 @@
                 xhr.send();
                 break;
             case "3":
-                xhr.open('GET', "http://192.168.1.142/cgi-bin/relay.cgi?toggle", true);
+                xhr.open('GET', "http://192.168.1.141/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();
                 break;
             case "4":
@@ -168,10 +356,65 @@
                 xhr.send();
                 break;
             case "7":
-                xhr.open('GET', "http://192.168.1.117/cgi-bin/relay.cgi?toggle", true);
+                xhr.open('GET', "http://192.168.1.170/cgi-bin/relay.cgi?toggle", true);
                 xhr.send();
-                break;                
-        }    };
+                break;
+            case "8":
+                xhr.open('GET', "http://192.168.1.144/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "9":
+                xhr.open('GET', "http://192.168.1.198/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "10":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "11":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "12":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "13":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "14":
+                xhr.open('GET', "http://192.168.1.122/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "15":
+                xhr.open('GET', "http://192.168.1.110/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "16":
+                xhr.open('GET', "http://192.168.167/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;        
+            case "17":
+                xhr.open('GET', "http://192.168.1.152/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "18":
+                xhr.open('GET', "http://192.168.1.177/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "19":
+                xhr.open('GET', "http://192.168.1.105/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+            case "20":
+                xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?toggle", true);
+                xhr.send();
+                break;
+
+        }   
+        
+    };
 
     ext._getStatus=function(){
         return{status:2,msg:"Ready"}
