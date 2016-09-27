@@ -428,7 +428,7 @@
             [' ', 'start sniffer', 'cnct'],
             ['r', 'sniffed', 'send_msg'],
             [' ', 'on', 'on'],
-            ['r', 'switch on plug %s', 'switch_on_plug', 's'],
+            [' ', 'switch on plug %s', 'switch_on_plug', 's'],
             [' ', 'off', 'off'],
             [' ', 'toggle', 'toggle'],
         ]
