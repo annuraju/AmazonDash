@@ -129,7 +129,7 @@
     ext.cnct = function () {
         if(debugLevel)
             console.log('Connecting to Server');
-        window.socket = new WebSocket("ws://10.0.2.15:9000");
+        window.socket = new WebSocket("ws://192.168.1.189:9000");
         window.socket.onopen = function () {
             var msg = JSON.stringify({
                 "command": "ready"
