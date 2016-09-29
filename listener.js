@@ -399,9 +399,7 @@
         if(button_result20 == 1){
             xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?off", true);
             xhr.send();
-        }
-    }   
-        
+        }  
     };
     
     ext.toggle = function(){
@@ -484,10 +482,7 @@
         if(button_result20 == 1){
             xhr.open('GET', "http://192.168.1.199/cgi-bin/relay.cgi?toggle", true);
             xhr.send();
-        }
-
-        }   
-        
+        } 
     };
 
     ext._getStatus=function(){
